@@ -2,10 +2,10 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/paramveer/COP 3514/output/project8_guests'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039B0, symSize: 0xF8 }
-  - { offsetInCU: 0xAA, offset: 0xAA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039B0, symSize: 0xF8 }
-  - { offsetInCU: 0xE0, offset: 0xE0, size: 0x8, addend: 0x0, symName: _add_guest, symObjAddr: 0xF8, symBinAddr: 0x100003AA8, symSize: 0x1B8 }
-  - { offsetInCU: 0x124, offset: 0x124, size: 0x8, addend: 0x0, symName: _print_list, symObjAddr: 0x2B0, symBinAddr: 0x100003C60, symSize: 0x8C }
-  - { offsetInCU: 0x156, offset: 0x156, size: 0x8, addend: 0x0, symName: _clear_list, symObjAddr: 0x33C, symBinAddr: 0x100003CEC, symSize: 0x5C }
-  - { offsetInCU: 0x1A4, offset: 0x1A4, size: 0x8, addend: 0x0, symName: _read_line, symObjAddr: 0x398, symBinAddr: 0x100003D48, symSize: 0xD0 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039E8, symSize: 0xF8 }
+  - { offsetInCU: 0xAA, offset: 0xAA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039E8, symSize: 0xF8 }
+  - { offsetInCU: 0xE0, offset: 0xE0, size: 0x8, addend: 0x0, symName: _add_guest, symObjAddr: 0xF8, symBinAddr: 0x100003AE0, symSize: 0x190 }
+  - { offsetInCU: 0x124, offset: 0x124, size: 0x8, addend: 0x0, symName: _print_list, symObjAddr: 0x288, symBinAddr: 0x100003C70, symSize: 0x8C }
+  - { offsetInCU: 0x156, offset: 0x156, size: 0x8, addend: 0x0, symName: _clear_list, symObjAddr: 0x314, symBinAddr: 0x100003CFC, symSize: 0x74 }
+  - { offsetInCU: 0x1A4, offset: 0x1A4, size: 0x8, addend: 0x0, symName: _read_line, symObjAddr: 0x388, symBinAddr: 0x100003D70, symSize: 0xD0 }
 ...
