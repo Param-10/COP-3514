@@ -1,6 +1,6 @@
 //Name: Paramveer Singh Bhele
 //UNum: U82076898
-//Description : Project 9 - Guests
+//Description : Project 9 - Guests - Updated Project 8
 // We weren't supposed to make any changes to the code other than add and write the code for function for printing, clearing and a guest function with its requirements.
 //First all the libraries which can be used are imported and then the variables the defined with specified lengths
 //then in the guest structure a few more important variables related to the guests are initialized. next another structure consisting of the functions which are related to adding the guests.
@@ -13,14 +13,14 @@
 //the clear list function, deallocates the list by using a temp variable to store the values. the readline function is predefinded for this project. it is used to read a line of the input.
 //the remove_guest function removes a guest from the list based on phone number, last name, and first name. The function goes through the list, searching for the guest that matches the specified criteria. 
 //If the guest is found, it adjusts the pointers to pass the guest to be removed and frees the memory occupied by that guest. The function returns the updated list.
-
+//the remove guest function is similar to the add guest function but it just frees the pointer to remove the specified guest from the list.
 
 //import libraries
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-//define lengths
+//define int lengths
 #define NAME_LEN 30
 #define PHONE_LEN 20
 
@@ -156,14 +156,14 @@ struct guest* remove_guest(struct guest* list) {
     struct guest *guest_new = (struct guest *)malloc(sizeof(struct guest)); 
     struct guest* point = list; //pointer to go through the list
     struct guest* previous = NULL; //keep track of the previous node 
-    //the user inputs the phone number, last name and first name
+    // The user inputs the phone number, last name and first name
     printf("Enter phone number: ");
     scanf("%s", (*guest_new).phone);
     printf("Enter guest's last name: ");
     read_line((*guest_new).last, NAME_LEN + 1);
     printf("Enter guest's first name: ");
     read_line((*guest_new).first, NAME_LEN + 1);
-    //go through the list and find the guest with the same phone number, last name and first name to be removed
+    // Go through the list and find the guest with the same phone number, last name and first name to be removed
     while (point != NULL && (strcmp((*point).phone, (*guest_new).phone) != 0 || strcmp((*point).last, (*guest_new).last) != 0 || strcmp((*point).first, (*guest_new).first) != 0)) {
         previous = point;
         point = (*point).next;
@@ -181,5 +181,5 @@ struct guest* remove_guest(struct guest* list) {
     }
     // Free the memory occupied by the pointer to be removed
     free(point);
-    return list;
+    return list; // Returns the list after removing the specified guest.
 }
